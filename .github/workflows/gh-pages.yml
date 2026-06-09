@@ -16,11 +16,19 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Prepare site folder
+        run: |
+          mkdir -p site
+          cp index.html site/ || true
+          cp styles.css site/ || true
+          cp script.js site/ || true
+          cp LICENSE site/ || true
+          if [ -d assets ]; then cp -R assets site/; fi
 
       - name: Upload site contents for Pages
         uses: actions/upload-pages-artifact@v1
         with:
-          path: '.'
+          path: 'site'
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
