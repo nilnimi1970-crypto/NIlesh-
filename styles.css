@@ -1,0 +1,25 @@
+:root{
+  --bg:#f4f7fb;
+  --card:#ffffff;
+  --accent:#2b7cff;
+  --muted:#6b7280;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial; background:var(--bg); color:#0f172a}
+.page{max-width:900px;margin:40px auto;padding:24px}
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:36px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));box-shadow:0 6px 18px rgba(20,30,60,0.06)}
+.logo{width:140px;height:140px;border-radius:22px;background:linear-gradient(135deg,var(--accent),#6fb1ff);display:flex;align-items:center;justify-content:center;font-size:56px;color:#fff;font-weight:700;margin-bottom:18px}
+.welcome{font-size:32px;margin:0 0 6px}
+.category{color:var(--muted);margin:0 0 12px}
+.progress-section{margin:28px 0;display:flex;justify-content:center}
+.progress-wrapper{width:100%;max-width:680px}
+.progress-bar{width:100%;height:18px;background:#e6eefc;border-radius:12px;overflow:hidden;border:1px solid rgba(11,48,88,0.04)}
+.progress-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#6fb1ff);transition:width 0.2s linear}
+.progress-text{margin-top:10px;text-align:center;color:var(--muted);font-size:14px}
+.contact{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 4px 12px rgba(15,23,42,0.04)}
+.contact h2{margin-top:0}
+.contact a{color:var(--accent);text-decoration:none}
+.site-footer{margin-top:18px;text-align:center;color:var(--muted)}
+.site-footer .social a{margin:0 8px;color:var(--muted);text-decoration:none}
+
+@media (max-width:600px){.logo{width:110px;height:110px;font-size:44px}.welcome{font-size:24px}}
